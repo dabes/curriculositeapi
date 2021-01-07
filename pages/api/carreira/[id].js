@@ -87,7 +87,6 @@ const deleteItem = async (req, res) => {
 };
 
 export default async (req, res) => {
-  console.log(req, res);
   await runMiddleware(req, res, cors);
   return new Promise((resolve) => {
     res.setHeader("Content-Type", "application/json");

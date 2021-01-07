@@ -43,7 +43,6 @@ const getItem = async () => {
 };
 
 const postItem = async (req, res) => {
-  console.log(req.body);
   const result = new Informacoes({
     email: req.body.email,
     idade: req.body.idade,

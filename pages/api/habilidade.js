@@ -43,7 +43,6 @@ const getItem = async () => {
 };
 
 const postItem = async (req, res) => {
-  console.log(req.body);
   const result = new Habilidade({
     name: req.body.name,
     type: req.body.type,

@@ -43,7 +43,6 @@ const getItem = async () => {
 };
 
 const postItem = async (req, res) => {
-  console.log(req.body);
   const result = new Carreira({
     company: req.body.company,
     timefrom: req.body.timefrom,
@@ -62,7 +61,6 @@ const postItem = async (req, res) => {
 };
 
 export default async (req, res) => {
-  console.log(req, res);
   await runMiddleware(req, res, cors);
   return new Promise((resolve) => {
     res.setHeader("Content-Type", "application/json");

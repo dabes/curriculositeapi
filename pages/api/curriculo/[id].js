@@ -86,7 +86,10 @@ export default async (req, res) => {
   await runMiddleware(req, res, cors);
   return new Promise((resolve) => {
     res.setHeader("Content-Type", "application/json");
-    res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
+    res.setHeader(
+      "Cache-Control",
+      "s-max-age=immutable, stale-while-revalidate"
+    );
     switch (req.method) {
       case "PATCH":
         patchItem(req, res)
